@@ -1,8 +1,8 @@
 class Asiento:
-    def __init__(self, color, precio, registro):
-        self.color = color
-        self.precio = precio
-        self.registro = registro
+    def __init__(self):
+        self.color = None
+        self.precio = None
+        self.registro = None
 
     def cambiarColor(self, nuevo_color):
         colores_permitidos = {"rojo", "verde", "amarillo", "negro", "blanco"}
@@ -11,10 +11,10 @@ class Asiento:
 
 
 class Motor:
-    def __init__(self, numeroCilindros, tipo, registro):
-        self.numeroCilindros = numeroCilindros
-        self.tipo = tipo
-        self.registro = registro
+    def __init__(self):
+        self.numeroCilindros = None
+        self.tipo = None
+        self.registro = None
 
     def cambiarRegistro(self, nuevo_registro):
         self.registro = nuevo_registro
@@ -28,13 +28,13 @@ class Motor:
 class Auto:
     cantidadCreados = ""
 
-    def __init__(self, modelo, precio, marca, registro):
-        self.modelo = modelo
-        self.precio = precio
+    def __init__(self):
+        self.modelo = None
+        self.precio = None
         self.asientos = []
-        self.marca = marca
+        self.marca = None
         self.motor = None
-        self.registro = registro
+        self.registro = None
         Auto.cantidadCreados = str(int(Auto.cantidadCreados) + 1)
 
     def cantidadAsientos(self):
